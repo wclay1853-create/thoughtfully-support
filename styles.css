@@ -448,14 +448,16 @@ h1 {
 
 .privacy-bubble-story {
   display: grid;
-  gap: clamp(24px, 8vw, 96px);
+  gap: clamp(120px, 18vh, 220px);
   padding: 6vh 0 12vh;
 }
 
 .privacy-bubble {
   position: sticky;
   top: 96px;
+  z-index: 1;
   width: min(640px, 100%);
+  aspect-ratio: 1;
   min-height: min(640px, calc(100vw - 32px));
   margin: 0 auto;
   border: 1px solid var(--line);
@@ -466,8 +468,31 @@ h1 {
   padding: clamp(38px, 8vw, 92px);
   background:
     radial-gradient(circle at 70% 18%, rgba(230, 193, 90, 0.14), transparent 34%),
-    rgba(17, 23, 22, 0.82);
-  box-shadow: 0 34px 90px var(--shadow);
+    rgba(17, 23, 22, 0.96);
+  box-shadow: 0 0 0 24px var(--background), 0 34px 90px var(--shadow);
+}
+
+.privacy-bubble::after {
+  content: "";
+  position: absolute;
+  inset: -16px;
+  z-index: -1;
+  border-radius: inherit;
+  background: var(--background);
+  opacity: 0.96;
+  transform: scale(1.12);
+}
+
+.privacy-bubble:nth-child(2) {
+  z-index: 2;
+}
+
+.privacy-bubble:nth-child(3) {
+  z-index: 3;
+}
+
+.privacy-bubble:nth-child(4) {
+  z-index: 4;
 }
 
 .privacy-bubble:nth-child(even) {
@@ -505,6 +530,24 @@ h1 {
   margin-bottom: 0;
 }
 
+.permission-stack {
+  display: grid;
+  gap: 10px;
+}
+
+.permission-stack p {
+  margin-bottom: 0;
+}
+
+.permission-stack strong {
+  display: block;
+  color: var(--gold);
+  font-size: 0.82rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
 .privacy-bubble a {
   color: var(--gold);
   font-weight: 900;
@@ -513,7 +556,7 @@ h1 {
 .disclosure-bubble {
   background:
     radial-gradient(circle at 62% 22%, rgba(230, 193, 90, 0.2), transparent 36%),
-    rgba(30, 51, 46, 0.84);
+    rgba(30, 51, 46, 0.96);
 }
 
 .document-card,
@@ -612,8 +655,8 @@ h1 {
   .privacy-bubble,
   .privacy-bubble:nth-child(even),
   .privacy-bubble:nth-child(odd) {
-    position: relative;
-    top: auto;
+    position: sticky;
+    top: 74px;
     margin: 0 auto;
   }
 }
@@ -643,8 +686,39 @@ h1 {
   }
 
   .privacy-bubble {
-    min-height: auto;
-    border-radius: 42px;
-    padding: 32px 24px;
+    width: min(calc(100vw - 28px), 430px);
+    height: min(calc(100vw - 28px), 430px);
+    min-height: unset;
+    aspect-ratio: 1;
+    border-radius: 999px;
+    padding: clamp(28px, 7vw, 42px);
+    overflow: hidden;
+  }
+
+  .privacy-bubble::after {
+    inset: -28px;
+    opacity: 1;
+  }
+
+  .privacy-bubble {
+    box-shadow: 0 0 0 34px var(--background), 0 28px 72px var(--shadow);
+  }
+
+  .privacy-bubble h2 {
+    font-size: clamp(1.72rem, 7vw, 2.7rem);
+    margin-bottom: 10px;
+  }
+
+  .privacy-bubble p {
+    font-size: clamp(0.76rem, 3.45vw, 0.92rem);
+    line-height: 1.34;
+  }
+
+  .permission-stack {
+    gap: 6px;
+  }
+
+  .permission-stack strong {
+    font-size: clamp(0.62rem, 2.9vw, 0.72rem);
   }
 }
