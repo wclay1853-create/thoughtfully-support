@@ -34,7 +34,7 @@ a {
 .page-shell {
   width: min(1120px, calc(100% - 32px));
   margin: 0 auto;
-  padding: 40px 0 64px;
+  padding: 24px 0 64px;
 }
 
 .page-shell.narrow {
@@ -47,6 +47,10 @@ a {
   justify-content: space-between;
   gap: 20px;
   padding: 10px 0 44px;
+}
+
+.home-nav {
+  justify-content: flex-start;
 }
 
 .brand-mark {
