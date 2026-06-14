@@ -102,6 +102,23 @@ a {
   color: var(--gold);
 }
 
+.button {
+  border-radius: 999px;
+  padding: 14px 18px;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.button.primary {
+  background: var(--gold);
+  color: #151a18;
+}
+
+.button.secondary {
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
 h1,
 h2,
 p {
@@ -407,18 +424,96 @@ h1 {
   letter-spacing: -0.045em;
 }
 
-.quiet-panel {
-  padding: 10vh 0 4vh;
-  border: 0;
-  background: transparent;
-}
-
-.quiet-panel h2 {
-  font-size: clamp(2.4rem, 6vw, 5.4rem);
+.home-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  padding: 0 0 6vh;
 }
 
 .document-hero {
   padding: 54px 0 24px;
+}
+
+.privacy-page {
+  width: min(980px, calc(100% - 32px));
+}
+
+.privacy-hero {
+  min-height: 54vh;
+  display: grid;
+  align-content: center;
+}
+
+.privacy-bubble-story {
+  display: grid;
+  gap: clamp(24px, 8vw, 96px);
+  padding: 6vh 0 12vh;
+}
+
+.privacy-bubble {
+  position: sticky;
+  top: 96px;
+  width: min(640px, 100%);
+  min-height: min(640px, calc(100vw - 32px));
+  margin: 0 auto;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(38px, 8vw, 92px);
+  background:
+    radial-gradient(circle at 70% 18%, rgba(230, 193, 90, 0.14), transparent 34%),
+    rgba(17, 23, 22, 0.82);
+  box-shadow: 0 34px 90px var(--shadow);
+}
+
+.privacy-bubble:nth-child(even) {
+  margin-left: 0;
+}
+
+.privacy-bubble:nth-child(odd) {
+  margin-right: 0;
+}
+
+.privacy-bubble span {
+  color: var(--gold);
+  font-size: 0.82rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.privacy-bubble h2 {
+  max-width: 430px;
+  margin: 12px 0 14px;
+  color: var(--text);
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 0.96;
+  letter-spacing: -0.045em;
+}
+
+.privacy-bubble p {
+  max-width: 440px;
+  color: var(--muted);
+  font-size: clamp(0.98rem, 2vw, 1.08rem);
+  line-height: 1.62;
+}
+
+.privacy-bubble p:last-child {
+  margin-bottom: 0;
+}
+
+.privacy-bubble a {
+  color: var(--gold);
+  font-weight: 900;
+}
+
+.disclosure-bubble {
+  background:
+    radial-gradient(circle at 62% 22%, rgba(230, 193, 90, 0.2), transparent 36%),
+    rgba(30, 51, 46, 0.84);
 }
 
 .document-card,
@@ -513,6 +608,14 @@ h1 {
   .support-grid {
     grid-template-columns: 1fr;
   }
+
+  .privacy-bubble,
+  .privacy-bubble:nth-child(even),
+  .privacy-bubble:nth-child(odd) {
+    position: relative;
+    top: auto;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 640px) {
@@ -537,5 +640,11 @@ h1 {
   .gesture-step {
     grid-template-columns: 1fr;
     gap: 10px;
+  }
+
+  .privacy-bubble {
+    min-height: auto;
+    border-radius: 42px;
+    padding: 32px 24px;
   }
 }
