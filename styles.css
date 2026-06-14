@@ -311,6 +311,21 @@ h2 {
   font-weight: 900;
 }
 
+.disclosure-note,
+.support-disclosure {
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 14px 16px;
+  background: rgba(230, 193, 90, 0.07);
+  color: var(--muted);
+}
+
+.support-disclosure {
+  margin: 16px 0 0;
+  font-size: 0.94rem;
+  line-height: 1.65;
+}
+
 .support-grid {
   display: grid;
   gap: 14px;
