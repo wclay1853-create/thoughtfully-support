@@ -266,11 +266,17 @@ h2 {
   display: grid;
   gap: 4px;
   margin-top: 6px;
+  padding: 0;
+  background: transparent;
+  border: 0;
 }
 
 .mini-detail-list p {
   margin: 0;
+  padding: 0;
   color: var(--muted);
+  background: transparent;
+  border: 0;
   font-size: 0.86rem;
   font-weight: 500;
   line-height: 1.24;
