@@ -1,9 +1,13 @@
 # Thoughtfully Support
 
-GitHub Pages site for Thoughtfully marketing, support, and privacy links.
+This repository contains the public support, privacy, and marketing pages for the Thoughtfully app.
 
-Live pages:
+## Live Pages
 
 - Home: https://wc-labs.github.io/thoughtfully-support/
-- Privacy: https://wc-labs.github.io/thoughtfully-support/privacy.html
+- Privacy Policy: https://wc-labs.github.io/thoughtfully-support/privacy.html
 - Support: https://wc-labs.github.io/thoughtfully-support/support.html
+
+## About Thoughtfully
+
+Thoughtfully helps users remember birthdays and save the small details that make showing up for people easier.
