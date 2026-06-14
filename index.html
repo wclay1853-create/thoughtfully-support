@@ -1,12 +1,107 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Thoughtfully helps you remember birthdays, favorite details, gift ideas, and the moments that make people feel remembered."
+    />
     <title>Thoughtfully</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>Thoughtfully</h1>
-    <p>Made for moments that matter.</p>
-    <p><a href="privacy.html">Privacy Policy</a></p>
-    <p><a href="support.html">Support</a></p>
+    <main class="page-shell">
+      <nav class="top-nav" aria-label="Thoughtfully links">
+        <a class="brand-mark" href="index.html" aria-label="Thoughtfully home">
+          <img src="assets/thoughtfully-icon.png" alt="" />
+          <span>Thoughtfully</span>
+        </a>
+
+        <div class="nav-links">
+          <a href="privacy.html">Privacy</a>
+          <a href="support.html">Support</a>
+        </div>
+      </nav>
+
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Birthday remembering, made personal</p>
+          <h1>Show up with intention.</h1>
+          <p class="lede">
+            Thoughtfully keeps birthdays, favorites, notes, and gift ideas close
+            so the people who matter feel remembered without everything feeling
+            last minute.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button primary" href="support.html">Get support</a>
+            <a class="button secondary" href="privacy.html">Read privacy policy</a>
+          </div>
+        </div>
+
+        <div class="phone-card" aria-label="Thoughtfully app preview">
+          <div class="phone-top">
+            <img src="assets/thoughtfully-icon.png" alt="" />
+            <div>
+              <p>Thoughtfully</p>
+              <span>Today&apos;s glance</span>
+            </div>
+          </div>
+
+          <div class="glance-card">
+            <span class="mini-label">Next birthday</span>
+            <strong>Jordan Lee</strong>
+            <p>12 days away</p>
+          </div>
+
+          <div class="glance-grid">
+            <div>
+              <span>Favorite</span>
+              <strong>Coffee</strong>
+            </div>
+            <div>
+              <span>Gift idea</span>
+              <strong>Garden tools</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="feature-band" aria-label="Thoughtfully features">
+        <article>
+          <span class="feature-icon">01</span>
+          <h2>Remember the date</h2>
+          <p>
+            Save birthdays and reminders so the important days stay visible.
+          </p>
+        </article>
+
+        <article>
+          <span class="feature-icon">02</span>
+          <h2>Remember the person</h2>
+          <p>
+            Keep favorites, notes, and gift ideas in one private place.
+          </p>
+        </article>
+
+        <article>
+          <span class="feature-icon">03</span>
+          <h2>Show up prepared</h2>
+          <p>
+            Optional prep reminders help make birthdays feel thoughtful.
+          </p>
+        </article>
+      </section>
+
+      <section class="quiet-panel">
+        <p class="eyebrow">Privacy-minded by design</p>
+        <h2>Your details stay practical, focused, and respectful.</h2>
+        <p>
+          Thoughtfully is built around reminders and saved details. Contact and
+          photo access are optional, and only used when you choose those actions.
+        </p>
+      </section>
+    </main>
   </body>
 </html>
